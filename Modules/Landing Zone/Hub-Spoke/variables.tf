@@ -12,6 +12,11 @@ variable "deploymentDetails" {
     }
 }
 
+variable "location" {
+  description = "Azure location for deployment"
+  default = "eastus2"
+}
+
 variable "tagsStandard" {
   description = "standard tags for objects created"
   type = object({
@@ -24,7 +29,7 @@ variable "tagsStandard" {
   default = {
     costCenter = "IT"
     createdBy = "Shawn Anderson"
-    createdOn = formatdate("YYYY/MM/DD", timestamp())
+    createdOn = "2022/05/01"
     critical = "YES"
     environment = "PROD"
   }
